@@ -15,22 +15,24 @@
   }
 </script>
 
-<textarea placeholder="Enter a skrypt" bind:value={text} rows="10" cols="50"
-></textarea>
-<div class="container">
-  {#if text.length > 0}
-    <div in:fade out:fly={{ y: 40, duration: 250 }} class="duration-message">
-      This skrypt will take
-      <strong>
-        <DurationDisplay {duration} />
-      </strong>
-      to read
-    </div>
-  {:else}
-    <div in:fade out:fly={{ y: 40, duration: 250 }} class="empty-message">
-      Enter you skrypt to find out how long it will take to read
-    </div>
-  {/if}
+<div>
+  <textarea placeholder="Enter a skrypt" bind:value={text} rows="10" cols="50"
+  ></textarea>
+  <div class="container">
+    {#if text.length > 0}
+      <div in:fade out:fly={{ y: 40, duration: 250 }} class="duration-message">
+        This skrypt will take
+        <strong>
+          <DurationDisplay {duration} />
+        </strong>
+        to read
+      </div>
+    {:else}
+      <div in:fade out:fly={{ y: 40, duration: 250 }} class="empty-message">
+        Enter your skrypt to find out how long it will take to read
+      </div>
+    {/if}
+  </div>
 </div>
 
 <style>
