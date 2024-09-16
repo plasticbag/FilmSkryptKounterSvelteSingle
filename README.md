@@ -1,10 +1,15 @@
 # Svelte + TS + Vite
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+## Setup Instructions ##
 
-## Recommended IDE Setup
+1. [VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+2. From the root directory open up a terminal
+3. run "npm install"
+4. Then in order to run an update and locally host the site. "npm run dev"
+5. It will print an address that you can visit locally from your browser.
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+## SquareSpace Deploy Instructions
+1. Copy main.js into a code snippet on the squarespace editor page?
 
 ## Need an official Svelte framework?
 
