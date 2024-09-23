@@ -9,7 +9,17 @@
 5. It will print an address that you can visit locally from your browser.
 
 ## SquareSpace Deploy Instructions
-1. Copy main.js into a code snippet on the squarespace editor page?
+1. Inside of dist/ is an index.html
+2. This neeeds to be copied over and into an html snippet on squarespace
+    - It also makes a vite.svg file but that isn't needed apparently.
+3. go to squarespace.com, enter credentials
+4. Select the ATL website
+5. Go to "Pages"
+5. Browse down to the un-linked pages. Find "SkryptKounterNew"
+6. Hit Edit
+7. Select the HTML snippet
+8. Select Edit
+9. Copy and paste the contents of index.html into here
 
 ## Need an official Svelte framework?
 
