@@ -2,12 +2,11 @@
   import { fade, fly } from "svelte/transition";
   import DurationDisplay from "./DurationDisplay.svelte";
   import type { Duration } from "./types";
-  import * as kounter from "./Kounter";
 
   let text: string = "";
   let duration: Duration = { hours: 0, minutes: 0, seconds: 0 };
   $: {
-    let seconds = kounter.Kount(text);
+    let seconds = text.length / 10;
     duration.hours = Math.floor(seconds / 3600);
     seconds = seconds - duration.hours * 3600;
     duration.minutes = Math.floor(seconds / 60);
