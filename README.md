@@ -1,4 +1,12 @@
 # Svelte + TS + Vite
+# + Jest
+
+npm install jest
+npm i --save-dev @types/jest
+added "test" : "jest" to package.json
+npm install --save-dev jest ts-jest
+npm i --save-dev jest-environment-jsdom
+npm i --save-dev svelte-jester
 
 ## Setup Instructions ##
 
