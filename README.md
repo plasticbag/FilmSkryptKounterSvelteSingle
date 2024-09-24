@@ -1,5 +1,43 @@
 # Svelte + TS + Vite
 
+# + Jest?
+ran npm install jest
+ran npm i --save-dev @types/jest
+added "test" : "jest" to package.json
+npm install --save-dev jest ts-jest
+
+//"type" : "module", // keeping this in allows me to do "npm run build", but I need it out in order to run jest tests "npm test"
+Attempting to unlock Jest in ECMA mode: https://jestjs.io/docs/ecmascript-modules
+// Got errors because because our package.json contains "type": "module". In ES modules, you can't use CommonJS features like module.exports directly.
+
+ * Setup Jest with ES module support:
+npm install --save-dev jest @jest/globals babel-jest
+
+ * Use a Babel config: Create a .babelrc file to ensure Jest can handle ES modules. You can configure Babel like this:
+{
+  "presets": ["@babel/preset-env"]
+}
+
+ * Update/Create jest.config.js to work with ES modules
+export default {
+  transform: {
+    '^.+\\.js$': 'babel-jest',
+    '^.+\\.ts$': 'ts-jest',
+    '^.+\\.svelte$': ['svelte-jester', { preprocess: true }]
+  },
+  extensionsToTreatAsEsm: ['.ts', '.svelte'],
+  moduleFileExtensions: ['js', 'ts', 'svelte'],
+  testEnvironment: 'jsdom'
+};
+if you're using Svelte, you may need to install svelte-jester.
+npm install --save-dev svelte-jester
+
+* Allow package.json to use experimental modules
+"scripts": 
+{
+  "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+}
+
 ## Setup Instructions ##
 
 1. [VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
